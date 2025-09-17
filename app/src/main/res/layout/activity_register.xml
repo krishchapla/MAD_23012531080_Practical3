@@ -20,7 +20,7 @@
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +41,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="20dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:text="User full name"
+                android:layout_marginTop="@dimen/reg_top_margin"
+                android:text="@string/User_name"
                 android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -54,17 +54,14 @@
                 android:layout_marginHorizontal="90dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="51dp"
-                android:layout_marginTop="43dp"
                 android:layout_marginEnd="67dp"
-                android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView8"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/textView8" />
 
             <EditText
                 android:id="@+id/editTextText4"
@@ -73,17 +70,14 @@
                 android:layout_marginHorizontal="90dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="53dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="67dp"
-                android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText5"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText"
                 tools:ignore="MissingConstraints" />
 
             <EditText
@@ -93,18 +87,12 @@
                 android:layout_marginHorizontal="90dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="126dp"
-                android:layout_marginTop="12dp"
                 android:layout_marginEnd="68dp"
-                android:layout_marginBottom="11dp"
-                android:ems="10"
                 android:inputType="text"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText6"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText4"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toEndOf="@+id/textView11" />
 
             <EditText
                 android:id="@+id/editTextText6"
@@ -119,6 +107,7 @@
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="14sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
                 app:layout_constraintBottom_toTopOf="@+id/editTextText7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -133,15 +122,12 @@
                 android:layout_marginHorizontal="90dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="88dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="61dp"
-                android:layout_marginBottom="10dp"
                 android:inputType="text"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText8"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText6"
                 tools:ignore="MissingConstraints" />
 
             <EditText
@@ -151,22 +137,21 @@
                 android:layout_marginHorizontal="90dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="49dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginEnd="60dp"
+                android:backgroundTint="@color/black"
                 android:inputType="text"
                 android:textSize="14sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText7"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toEndOf="@+id/textView13" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="32dp"
-                android:text="Phone number"
+                android:layout_marginTop="@dimen/reg_top_margin"
+                android:text="@string/Phone_number"
                 android:textSize="17sp"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,8 +162,8 @@
                 android:layout_width="41dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="32dp"
-                android:text="City"
+                android:layout_marginTop="@dimen/reg_top_margin"
+                android:text="@string/City"
                 android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -188,8 +173,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="36dp"
-                android:text="Email"
+                android:layout_marginTop="@dimen/reg_top_margin"
+                android:text="@string/Email"
                 android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -199,8 +184,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
-                android:text="Password"
+                android:layout_marginTop="32dp"
+                android:text="@string/Password"
                 android:textSize="17sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -210,8 +195,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="Confirm Password"
+                android:layout_marginTop="@dimen/reg_top_margin"
+                android:text="@string/Confirm_password"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
@@ -234,9 +219,12 @@
 
         <Button
             android:id="@+id/registerButton"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/Register"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -246,7 +234,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="Do you have an account?"
+        android:text="@string/Do_acount"
         app:layout_constraintEnd_toStartOf="@+id/textView15"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -257,8 +245,7 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="LOGIN"
+        android:text="@string/Login"
         android:textColor="#D93D90"
         android:textSize="17sp"
         android:textStyle="bold"
