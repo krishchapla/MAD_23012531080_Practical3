@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_23012531080_Practical3">
 
-        <!-- Set RegisterActivity as launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

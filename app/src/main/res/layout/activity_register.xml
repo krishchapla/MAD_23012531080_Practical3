@@ -235,13 +235,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="@string/Do_acount"
-        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@id/loginButton"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
     <Button
-        android:id="@+id/textView15"
+        android:id="@+id/loginButton"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

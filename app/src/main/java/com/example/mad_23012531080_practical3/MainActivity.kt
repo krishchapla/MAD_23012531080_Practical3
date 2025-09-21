@@ -2,6 +2,7 @@ package com.example.mad_23012531080_practical3
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -29,19 +30,20 @@ class MainActivity : AppCompatActivity() {
             val loginintent = Intent(this, LoginActivity::class.java)
             startActivity(loginintent)
             }
+        val dialButton: Button = findViewById(R.id.button)
+        val webButton: Button = findViewById(R.id.button7)
 
-        findViewById<Button>(R.id.button7).setOnClickListener {
-            val url = editurl.text.toString()
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = android.net.Uri.parse(url)
-            startActivity(intent)
+        dialButton.setOnClickListener {
+            val dialIntent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:99999999") // Replace with desired number or leave empty
+            }
+            startActivity(dialIntent)
         }
-        findViewById<Button>(R.id.button).setOnClickListener {
-            val phone = phone.text.toString()
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = android.net.Uri.parse("tel:$phone")
-            startActivity(intent)
 
+
+        webButton.setOnClickListener {
+            val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+            startActivity(webIntent)
         }
 
 
