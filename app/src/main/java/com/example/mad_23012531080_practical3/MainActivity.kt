@@ -12,6 +12,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.net.URL
 
+private val Unit.ACTION_SHOW_ALARM: Any
+    get() {
+        TODO()
+    }
+
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     private lateinit var editurl: EditText
@@ -32,6 +37,9 @@ class MainActivity : AppCompatActivity() {
             }
         val dialButton: Button = findViewById(R.id.button)
         val webButton: Button = findViewById(R.id.button7)
+        val gallerybutton:Button= findViewById(R.id.button3)
+        val cambutton:Button = findViewById(R.id.button4)
+        val alarmbutton:Button = findViewById(R.id.button5)
 
         dialButton.setOnClickListener {
             val dialIntent = Intent(Intent.ACTION_DIAL).apply {
@@ -44,6 +52,19 @@ class MainActivity : AppCompatActivity() {
         webButton.setOnClickListener {
             val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
             startActivity(webIntent)
+        }
+
+        gallerybutton.setOnClickListener {
+            val galleryIntent = Intent(Intent.ACTION_VIEW).apply { type="image/*" }
+            startActivity(galleryIntent)
+          }
+        cambutton.setOnClickListener {
+            val cameraIntent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivity(cameraIntent)
+        }
+        alarmbutton.setOnClickListener {
+            val alarmIntent = Intent(android.provider.AlarmClock.ACTION_SHOW_ALARMS)
+            startActivity(alarmIntent)
         }
 
 
